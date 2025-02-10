@@ -46,7 +46,7 @@ export interface ResumeWithSlug extends Resume {
 }
 
 async function importResume(resumeFilename: string): Promise<ResumeWithSlug> {
-  let { resume } = (await import(`../app/resume/page.mdx`)) as {
+  let { resume } = (await import(`../app/resume/cv.mdx`)) as {
     default: React.ComponentType
     resume: Resume
   }
@@ -59,5 +59,5 @@ async function importResume(resumeFilename: string): Promise<ResumeWithSlug> {
 
 export async function getResume() {
   // Since we know exactly where the resume MDX file is, we don't need glob
-  return importResume('page.mdx')
+  return importResume(' cv.mdx')
 }

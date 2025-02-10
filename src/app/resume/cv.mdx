@@ -1,0 +1,168 @@
+import { Button } from '@/components/Button'
+
+export const metadata = {
+  title: "Michael Bekele - Resume",
+  description: "UX/UI Designer & Web Developer Resume"
+}
+
+export const resume = {
+  name: "Michael Bekele",
+  role: "UX/UI Designer & Web Developer",
+  profileSummary: "Strategic UX/UI Design Lead with 5+ years of experience driving mission-critical digital solutions for federal clients, including Section 508/WCAG compliance and cross-functional leadership. Adept at aligning design systems with the U.S. Web Design System (USWDS) and delivering user-centric interfaces for government platforms. Proven expertise in Figma, Adobe Creative Cloud, and Agile workflows—with a focus on accessibility excellence and CMS integration. Experienced in mentoring teams, conducting usability research, and collaborating with stakeholders to meet federal mandates.",
+  workExperience: [
+    {
+      company: "Emprata, Federal Communication Commission (FCC)",
+      title: "UX/UI Design Lead",
+      period: "2023 – 2024",
+      description: [
+        "Led FCC auction systems design initiatives with WCAG 2.2 AA compliance and USWDS principles integration.",
+        "Directed cross-functional Agile teams in prototyping and CMS platform integration."
+      ]
+    },
+    {
+      company: "ResolveSoft, Highpoint Digital",
+      title: "UX/UI Developer",
+      period: "2022 – 2023",
+      description: [
+        "Developed accessible UI components for Medicare platforms with Section 508 compliance.",
+        "Led usability research and backend integration for enhanced user experience."
+      ]
+    },
+    {
+      company: "Coding Temple",
+      title: "UI Specialist & Front-End Developer",
+      period: "2021 – 2022",
+      description: [
+        "Mentored junior designers while creating user journey maps and service blueprints.",
+        "Collaborated with product teams to align design objectives with technical requirements."
+      ]
+    },
+    {
+      company: "Triple-A Auto LLC",
+      title: "Graphic Designer & Front-End Developer",
+      period: "2018 – 2021",
+      description: [
+        "Optimized WordPress CMS templates for accessibility and user experience.",
+        "Increased user engagement by 30% through A/B testing and UI improvements."
+      ]
+    }
+  ],
+  projects: [
+    {
+      title: "Seamless Timesheet Application",
+      technologies: "React, Node.js, MongoDB",
+      description: [
+        "Developed a minimalistic timesheet web app with an intuitive time logging interface.",
+        "Implemented streamlined workflow processes for organizational efficiency."
+      ]
+    },
+    {
+      title: "TalkToAHuman",
+      technologies: "Vue.js, Firebase, Google Maps API",
+      description: [
+        "Built a platform connecting support seekers with volunteer listeners using location-based matching.",
+        "Implemented comprehensive safety features and a secure meeting coordination system."
+      ]
+    },
+    {
+      title: "Logo Generator Pro",
+      technologies: "JavaScript, Canvas API, Node.js",
+      description: [
+        "Created an automated tool for generating multiple logo variations with customization options.",
+        "Developed a batch processing system with packaged deliverable exports."
+      ]
+    },
+    {
+      title: "Digital Sign-In/Sign-Out Application",
+      technologies: "React Native, Express, GPS API",
+      description: [
+        "Built a GPS-based attendance system with real-time location validation.",
+        "Implemented an automated PDF export system for attendance tracking and reporting."
+      ]
+    } 
+  ],
+  education: [
+    {
+      degree: "Bachelor's in Electrical Technology",
+      school: "Thomas Edison State University",
+      date: "Expected March 2025"
+    },
+    {
+      degree: "Associates in Graphic Design",
+      school: "Collin College",
+      date: "2021"
+    },
+    {
+      degree: "Google Certificate in UX Design",
+      school: "Google",
+      date: "2021"
+    }
+  ],
+  technicalSkills: {
+    design: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Dreamweaver"],
+    accessibility: ["JAWS", "WAVE", "ANDI", "WCAG 2.2 AA", "Section 508"],
+    technical: ["Adobe Experience Manager (AEM)", "WordPress", "React", "Node.js"],
+    methodologies: ["Agile", "Iterative Design", "Usability Research"]
+  }
+}
+
+# {resume.name}
+
+{resume.role}
+
+## Profile Summary
+
+{resume.profileSummary}
+
+---
+
+## Work Experience
+
+{resume.workExperience.map((job) => (
+  <>
+    ### {job.company}
+    **{job.title}** ({job.period})  
+    {job.description.map((desc) => (
+      `- ${desc}  `
+    ))}
+  </>
+))}
+
+---
+
+## Projects
+
+{resume.projects.map((project) => (
+  <>
+    ### {project.title}  
+    **Technologies:** {project.technologies}  
+    {project.description.map((desc) => (
+      `- ${desc}  `
+    ))}
+  </>
+))}
+
+---
+
+## Education
+
+{resume.education.map((edu) => (
+  <>
+    ### {edu.degree}  
+    {edu.school}  
+    *{edu.date}*
+  </>
+))}
+
+---
+
+## Technical Skills
+
+**Design:** {resume.technicalSkills.design.join(', ')}  
+**Accessibility:** {resume.technicalSkills.accessibility.join(', ')}  
+**Technical:** {resume.technicalSkills.technical.join(', ')}  
+**Methodologies:** {resume.technicalSkills.methodologies.join(', ')}
+
+---
+
+<Button href="#" variant="secondary">Download CV</Button>

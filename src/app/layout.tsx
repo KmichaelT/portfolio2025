@@ -6,18 +6,25 @@ import { Layout } from '@/components/Layout'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - Spencer Sharp',
-    default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+  title: 'Michael Bekele - UX/UI Designer & Developer Resume',
+  description: 'Strategic UX/UI Design Lead with 5+ years of experience in federal digital solutions, Section 508/WCAG compliance, and cross-functional leadership.',
+  openGraph: {
+    title: 'Michael Bekele - UX/UI Designer & Developer Resume',
+    description: 'Strategic UX/UI Design Lead with 5+ years of experience in federal digital solutions, Section 508/WCAG compliance, and cross-functional leadership.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/resume`,
+    siteName: 'Michael Bekele',
+    type: 'profile',
+    locale: 'en_US',
   },
-  description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Michael Bekele - UX/UI Designer & Developer Resume',
+    description: 'Strategic UX/UI Design Lead with 5+ years of experience in federal digital solutions, Section 508/WCAG compliance, and cross-functional leadership.',
+  },
   alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/resume`,
+  }
+
 }
 
 export default function RootLayout({

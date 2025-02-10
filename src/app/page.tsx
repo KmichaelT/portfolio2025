@@ -183,9 +183,9 @@ function SocialLink({
 }
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Home',
   description:
-    "I'm Spencer Sharp. I live in New York City, where I design the future.",
+    "I'm Michael Bekele. I live in New York City, where I design the future.",
 }
 
 // A preview component very similar to your Article component—each project preview
