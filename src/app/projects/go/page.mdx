@@ -1,0 +1,29 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+import goAppLogo from '@/images/logos/go.svg'
+
+export const project = {
+  author: 'Your Name',
+  date: '2023-10-10',
+  title: 'GO App',
+  description: 'A military drill management system designed for streamlined drill management and attendance processes in military units.',
+  logo: goAppLogo,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
+
+# GO App
+
+The **GO App** is a military drill management system designed specifically for military units to streamline their drill management and attendance processes. Think of it as a modern solution for handling all the paperwork and coordination that goes into military drills.
+
+For commanders and administrators, it's like having a digital command center. They can create and manage drill schedules, track attendance, monitor their soldiers' participation, and generate reports all in one place. Instead of dealing with stacks of paper forms and Excel sheets, they can handle everything through the app – from scheduling drills to processing RST (Rescheduled Training) requests.
+
+For individual soldiers, it's like having their drill schedule in their pocket. They can check their upcoming drills, sign in and out of training (with location verification to ensure they're actually at the drill site), submit excuse requests if needed, and keep track of their attendance record. If they need to reschedule training, they can submit RST requests directly through the app.
+
+The system is built with military structure in mind. It organizes everything by companies, with proper hierarchies for commanders, NCOs, and soldiers. It handles all the essential documentation and keeps everything organized according to military standards.
+
+What makes it particularly useful is that it automates many time-consuming tasks. For example, instead of manually taking attendance, soldiers can sign in digitally when they're at the drill location. Commanders can quickly generate attendance reports instead of compiling them by hand. And if someone needs to request an excuse or RST, there's a clear digital process rather than chasing down paperwork.
